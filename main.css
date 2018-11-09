@@ -1,0 +1,37 @@
+body  {
+background-color: #D3D3D3;
+}
+
+.mainTitle {
+  color: #000066;
+  margin: 0 auto;
+  width: 500px;
+  font-size: 250%;
+}
+
+.subtitle_1 {
+  color: #3366cc;
+  margin-left: 750px;
+  padding-top: 20px;
+  margin-top: 30px;
+  width: 300px;
+  font-size: 200%;
+}
+
+.subtitle_2 {
+  color: #3366cc;
+  margin-left: 600px;
+  width: 600px;
+  font-size: 150%;
+}
+
+.startButton {
+  width: 200px;
+  margin-left: 700px;
+}
+
+
+.loginButton {
+  width: 200px;
+  margin-left: 718px;
+}
