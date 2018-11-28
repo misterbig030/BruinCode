@@ -1,0 +1,48 @@
+body {
+background: radial-gradient(grey, black);
+
+}
+
+.center1{
+      font-family: 'Mali',serif;
+      color:#68A5D8;
+      margin:0 auto;
+      width: 40%;
+      height:100%;
+      }
+
+.center1 h1:after, .center1 h1:before {
+        background:	#CEC973;
+        content: "";
+        height: 3px;
+        position: absolute;
+        top: 12%;
+        width: 32%;
+      }
+
+h1:before {
+        left: 0;
+      }
+
+ h1:after {
+        right: 0;
+      }
+
+h1{
+        font-size:50px;
+        font-weight:bold;
+        padding-bottom:3px;
+        }
+  .center4
+  {
+              font-family: 'Mali',serif;
+              color:#68A5D8;
+              margin:0 auto;
+              width: 50%;
+              height:100%;
+          }
+table
+  {
+      width:110%;
+    font-size: 22px;
+  }
