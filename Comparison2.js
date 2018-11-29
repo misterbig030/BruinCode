@@ -14,12 +14,9 @@ $( document ).ready(function()
 });
 
 function myFunc1(){
-	//document.getElementById("class1").innerHTML = "screw you";
 	database = firebase.database();
   	var ref=database.ref('courseData');
-  // ref.push({
-  //   courseNumber: "CS182EW"
-  // });
+
   	ref.on("value", function(snapshot){
   		var data = snapshot.val();
     	var keys = Object.keys(data);
@@ -44,15 +41,17 @@ function myFunc1(){
 
 		var tableRow = document.createElement("tr");
 		var y = document.createElement("td");
-		y.innerHTML = "Department: ";
+		y.innerHTML = "Projects: ";
 		tableRow.appendChild(y);
 		document.getElementById("myTable").appendChild(tableRow);
 		var col1 = document.createElement("td");
-		col1.innerHTML = data[keys[key1]].department;
+		col1.innerHTML = data[keys[key1]].projects;
 		tableRow.appendChild(col1);
 		var col2 = document.createElement("td");
-		col2.innerHTML = data[keys[key2]].department;
+		col2.innerHTML = data[keys[key2]].projects;
 		tableRow.appendChild(col2);
+		col1.align = "center";
+		col2.align = "center";
 
 		var tableRow = document.createElement("tr");
 		var y = document.createElement("td");
@@ -65,6 +64,8 @@ function myFunc1(){
 		var col2 = document.createElement("td");
 		col2.innerHTML = data[keys[key2]].lecHours;
 		tableRow.appendChild(col2);
+		col1.align = "center";
+		col2.align = "center";
 
 		var tableRow = document.createElement("tr");
 		var y = document.createElement("td");
@@ -77,18 +78,22 @@ function myFunc1(){
 		var col2 = document.createElement("td");
 		col2.innerHTML = data[keys[key2]].outHours;
 		tableRow.appendChild(col2);
+		col1.align = "center";
+		col2.align = "center";
 
 		var tableRow = document.createElement("tr");
 		var y = document.createElement("td");
-		y.innerHTML = "Units: ";
+		y.innerHTML = "Essays: ";
 		tableRow.appendChild(y);
 		document.getElementById("myTable").appendChild(tableRow);
 		var col1 = document.createElement("td");
-		col1.innerHTML = data[keys[key1]].units;
+		col1.innerHTML = data[keys[key1]].essays;
 		tableRow.appendChild(col1);
 		var col2 = document.createElement("td");
-		col2.innerHTML = data[keys[key2]].units;
+		col2.innerHTML = data[keys[key2]].essays;
 		tableRow.appendChild(col2);
+		col1.align = "center";
+		col2.align = "center";
 
 		var addToSchedule = document.createElement("tr");
 		var y = document.createElement("td");
@@ -97,21 +102,72 @@ function myFunc1(){
 		document.getElementById("myTable").appendChild(addToSchedule);
 		var add1 = document.createElement("td");
 		var btn1 = document.createElement("button");
+		btn1.style.height = "35px";
+        btn1.style.width = "100px";
+        btn1.style.backgroundColor = "#CEC973";
+        btn1.style.fontSize= "22px";
+        btn1.style.fontFamily = "'Mali',serif";
 		btn1.innerHTML = "Add";
 		add1.appendChild(btn1);
 		addToSchedule.appendChild(add1);
-
 		var add2 = document.createElement("td");
 		var btn2 = document.createElement("button");
+		btn2.style.height = "35px";
+        btn2.style.width = "100px";
+        btn2.style.backgroundColor = "#CEC973";
+        btn2.style.fontSize= "22px";
+        btn2.style.fontFamily = "'Mali',serif";
 		btn2.innerHTML = "Add";
 		add2.appendChild(btn2);
 		addToSchedule.appendChild(add2);
+		add1.align = "center";
+		add2.align = "center";
 
-	
-	// console.log(key1);
- //    		console.log(key2);
+		displayColor();
 
 	}, function(error){
     console.log("Error: " + error.code);
   	})
+}
+
+function displayColor(){
+	var table = document.getElementById("myTable");
+	//console.log(parseInt(table.rows[2].cells[1].innerHTML));
+	var workLoad1 = parseInt(table.rows[2].cells[1].innerHTML) + parseInt(table.rows[5].cells[1].innerHTML);
+	var workLoad2 = parseInt(table.rows[2].cells[2].innerHTML) + parseInt(table.rows[5].cells[2].innerHTML);
+	var weeklyHour1 = parseInt(table.rows[3].cells[1].innerHTML) + parseInt(table.rows[4].cells[1].innerHTML);
+	var weeklyHour2 = parseInt(table.rows[3].cells[2].innerHTML) + parseInt(table.rows[4].cells[2].innerHTML);
+	if (workLoad1 > workLoad2){
+		//console.log("greater");
+		for(var i = 0; i < table.rows.length; i++){
+			table.rows[i].cells[1].style.color = "#FFA500";
+			table.rows[i].cells[2].style.color = "#32CD32";
+		}		
+	}
+	else if (workLoad1 == workLoad2){
+		if (weeklyHour1 > weeklyHour2){
+			for(var i = 0; i < table.rows.length; i++){
+				table.rows[i].cells[1].style.color = "#FFA500";
+				table.rows[i].cells[2].style.color = "#32CD32";
+			}
+		}
+		else if (weeklyHour1 < weeklyHour2){
+			for(var i = 0; i < table.rows.length; i++){
+				table.rows[i].cells[1].style.color = "#32CD32";
+				table.rows[i].cells[2].style.color = "#FFA500";
+			}	
+		}
+		else{
+			for(var i = 0; i < table.rows.length; i++){
+				table.rows[i].cells[1].style.color = "#FF69B4";
+				table.rows[i].cells[2].style.color = "#FF69B4";
+			}	
+		}	
+	}
+	else{
+		for(var i = 0; i < table.rows.length; i++){
+			table.rows[i].cells[1].style.color = "#32CD32";
+			table.rows[i].cells[2].style.color = "#FFA500";
+		}	
+	}
 }

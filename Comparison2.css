@@ -6,7 +6,7 @@ body {
       font-family: 'Mali',serif;
       color:#68A5D8;
       margin:0 auto;
-      width: 40%;
+      width: 60%;
       height:100%;
       }
 
@@ -43,6 +43,7 @@ h1{
 
 table{
 	font-size: 25px;
+	border-spacing: 30px 5px
 }
 
 #class1{
