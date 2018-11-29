@@ -16,6 +16,7 @@ $( document ).ready(function()
 function myFunc1(){
 	database = firebase.database();
   	var ref=database.ref('courseData');
+  	var refToSch=database.ref('scheduleTrack');
 
   	ref.on("value", function(snapshot){
   		var data = snapshot.val();
@@ -110,6 +111,10 @@ function myFunc1(){
 		btn1.innerHTML = "Add";
 		add1.appendChild(btn1);
 		addToSchedule.appendChild(add1);
+		btn1.onclick = function(){
+			refToSch.push(data[keys[key1]]);
+			window.location.href="schedulePage.html";
+		};
 		var add2 = document.createElement("td");
 		var btn2 = document.createElement("button");
 		btn2.style.height = "35px";
@@ -120,6 +125,10 @@ function myFunc1(){
 		btn2.innerHTML = "Add";
 		add2.appendChild(btn2);
 		addToSchedule.appendChild(add2);
+		btn2.onclick = function(){
+			refToSch.push(data[keys[key2]]);
+			window.location.href="schedulePage.html";
+		};
 		add1.align = "center";
 		add2.align = "center";
 
