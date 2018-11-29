@@ -25,15 +25,11 @@ function myFunc1(){
     	var keys = Object.keys(data);
     	var key1 = localStorage.key1;
     	var key2 = localStorage.key2;
-    	// for (var i = 0; i < keys.length; i++){
-    	// 	if (data[keys[i]].professor == localStorage.prof1){
-    	// 		//alert(data[keys[i]].lecHours);
-    	// 		key1 = i;
-    	// 	}
-    	// 	else if (data[keys[i]].professor == localStorage.prof2) {
-    	// 		key2 = i;
-    	// 	}
-
+    	for (var i = 0; i < keys.length; i++){
+    		if (data[keys[i]].professor == localStorage.prof2) {
+    			key2 = i;
+    		}
+    	}
     	var tableRow = document.createElement("tr");
 		var y = document.createElement("td");
 		y.innerHTML = "Professor: ";

@@ -57,12 +57,15 @@ function myFunc1(){
         y.style.fontSize= "22px";
         y.style.fontFamily = "'Mali',serif";
         y.innerHTML = "select";
+
         //y.appendChild(z);
         x.appendChild(y);
+        //localStorage.key2 = keynum2;
         y.onclick = function(){
+          //console.log(keynum2);
           localStorage.prof1 = profStorage;
           //localStorage.prof2 = professor2;
-          localStorage.key2 = keynum2;
+          localStorage.prof2 = this.parentNode.childNodes[0].data;
           location.href = "Comparison2.html";
         };
         } 
