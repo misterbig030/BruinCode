@@ -1,0 +1,115 @@
+body {
+background: radial-gradient( DodgerBlue, Aqua);
+
+}
+
+.center1{
+      font-family: 'Mali',serif;
+      color:#68A5D8;
+      margin:0 auto;
+      width: 40%;
+      height:100%;
+      }
+
+.center1 h1:after, .center1 h1:before {
+        background:	Tomato;
+        content: "";
+        height: 3px;
+        position: absolute;
+        top: 10%;
+        width: 25%;
+      }
+
+h1:before {
+        left: 0;
+      }
+
+ h1:after {
+        right: 0;
+      }
+
+h1{
+        color:yellow;
+        font-size:60px;
+        padding-bottom:3px;
+        }
+
+h2{
+    color:LemonChiffon;
+    font-size:40px;
+}
+
+.searchForm{
+
+    width:145px;
+    height:20px;
+}
+.btn{
+  background-color: GhostWhite;
+    height:35px;
+    width:150px;
+    font-size:22px;
+    font-family: 'Mali',serif;
+}
+.center3{
+      margin:0 auto;
+      width: 12%;
+      height:100%;
+      }
+h3{
+      font-size:30px;
+  }
+
+table
+{
+    width:150%;
+    font-size: 22px;
+}
+.center4
+{
+      font-family: 'Mali',serif;
+      color:#68A5D8;
+      margin:0 auto;
+      width: 50%;
+      height:100%;
+  }
+input{
+      width:40px;
+      font-size:15px;
+      border: 2px;
+      border-radius: 6px;
+}
+button{
+  background-color: GhostWhite;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.button1{
+  font-size: 30px;
+}
+.content{
+  padding: 2%;
+  font-size: 35px;
+  font-family: 'Mali',serif;
+  color: white;
+  margin: auto;
+  width: 45%;
+  border: 3px solid white;
+  text-align: center;
+}
+.content1{
+  padding: 15%;
+  font-size: 35px;
+  font-family: 'Mali',serif;
+  color: white;
+  margin: auto;
+  width: 45%;
+  border: 3px solid white;
+  text-align: left;
+}
+p{
+  text-align: center;
+}
+button:hover {
+background-color: #ddd;
+}
