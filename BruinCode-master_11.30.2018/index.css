@@ -1,0 +1,36 @@
+body {
+background: radial-gradient( DodgerBlue, Aqua);
+}
+.content{
+      font-family: 'Mali',serif;
+      color:#68A5D8;
+      margin: auto;
+      width: 35%;
+      border: 3px solid white;
+      text-align: center;
+      padding: 12% 0;
+}
+h1{
+  color:yellow;
+  font-size:120px;
+}
+h2{
+  color:LemonChiffon;
+  font-size: 70px;
+}
+button{
+  background-color: GhostWhite;
+  border-radius: 8px;
+}
+.button1{
+  font-size: 50px;
+}
+p{
+  font-size: 30px;
+}
+.button2{
+  font-size: 40px;
+}
+button:hover {
+background-color: #ddd;
+}

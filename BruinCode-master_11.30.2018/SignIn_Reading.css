@@ -1,0 +1,56 @@
+body {
+background: radial-gradient( DodgerBlue, Aqua);
+text-align: center;
+}
+.content{
+  padding: 10%;
+  font-size: 35px;
+  font-family: 'Mali',serif;
+  color: white;
+  margin: auto;
+  width: 30%;
+  border: 3px solid white;
+
+}
+p{
+  text-align: left;
+}
+h2{
+color:LemonChiffon;
+  font-size: 40px;
+  padding-left: 10px;
+}
+h1{
+  color:yellow;
+  font-size: 100px;
+}
+button{
+  background-color: GhostWhite;
+  border-radius: 8px;
+  font-size: 30px;
+}
+input{
+    width: 12%;
+    font-size:25px;
+    border: 2px;
+    border-radius: 6px;
+}
+h1:after,  h1:before {
+        background:	Tomato;
+        content: "";
+        height: 3px;
+        position: absolute;
+        top: 18%;
+        width: 35%;
+      }
+
+h1:before {
+        left: 0;
+      }
+
+ h1:after {
+        right: 0;
+      }
+  button:hover {
+      background-color: #ddd;
+      }
