@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Sing up</h1>
+    <h1>Step 1</h1>
+    <h2>Hi! New Bruins!</h2>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  </head>
+  <body>
+    <p>First Name: <input id="userFristName" type="text"> Last Name: <input id="userLastName"type="text"></p>
+    <p>Major: <input id="major" type="text"></p>
+    <p>E-mail: <input id="email" type="text"></p>
+    <p>Password: <input id="password" type="password">
+      <input type="checkbox" onclick="showPassword()">Show Password</p>
+    <p>Confirm Password: <input id="cfpassword" type="password"></p>
+    <p><button onclick="submitSignIn()">Next</button></p>
+    <p><a href="LogIn.html"><button> Log In</button></a></p>
+    <script src="SignIn.js"></script>
+  </body>
+
+</html>
