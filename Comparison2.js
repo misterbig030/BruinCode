@@ -113,7 +113,9 @@ function myFunc1(){
 		addToSchedule.appendChild(add1);
 		btn1.onclick = function(){
 			refToSch.push(data[keys[key1]]);
-			window.location.href="schedulePage.html";
+			//alert("You added "+data[keys[key1]]+"in your schedule!");
+			//window.location.href="schedulePage.html";
+			alert("Class added!");
 		};
 		var add2 = document.createElement("td");
 		var btn2 = document.createElement("button");
@@ -127,12 +129,17 @@ function myFunc1(){
 		addToSchedule.appendChild(add2);
 		btn2.onclick = function(){
 			refToSch.push(data[keys[key2]]);
-			window.location.href="schedulePage.html";
+			//window.location.href="schedulePage.html";
+			alert("Class added!")
 		};
 		add1.align = "center";
 		add2.align = "center";
 
 		displayColor();
+
+		// var seeSchedule = document.createElement("button");
+		// seeSchedule.innerHTML = "See Schedule";
+		// document.getElementById("myDiv").appendChild(seeSchedule);
 
 	}, function(error){
     console.log("Error: " + error.code);
@@ -151,7 +158,7 @@ function displayColor(){
 		for(var i = 0; i < table.rows.length; i++){
 			table.rows[i].cells[1].style.color = "#FFA500";
 			table.rows[i].cells[2].style.color = "#32CD32";
-		}		
+		}
 	}
 	else if (workLoad1 == workLoad2){
 		if (weeklyHour1 > weeklyHour2){
@@ -164,19 +171,23 @@ function displayColor(){
 			for(var i = 0; i < table.rows.length; i++){
 				table.rows[i].cells[1].style.color = "#32CD32";
 				table.rows[i].cells[2].style.color = "#FFA500";
-			}	
+			}
 		}
 		else{
 			for(var i = 0; i < table.rows.length; i++){
 				table.rows[i].cells[1].style.color = "#FF69B4";
 				table.rows[i].cells[2].style.color = "#FF69B4";
-			}	
-		}	
+			}
+		}
 	}
 	else{
 		for(var i = 0; i < table.rows.length; i++){
 			table.rows[i].cells[1].style.color = "#32CD32";
 			table.rows[i].cells[2].style.color = "#FFA500";
-		}	
+		}
 	}
+}
+
+function goToSchedule(){
+    window.location.href="schedulePage.html";
 }

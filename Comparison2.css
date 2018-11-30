@@ -57,3 +57,15 @@ table{
     font-weight:bold;
     padding-bottom:3px;
 }
+
+#seeSchedule{
+  height: 40px;
+  width: 200px;
+  background-color: #CEC973;
+  font-size: 22px;
+  font-family: 'Mali',serif;
+}
+
+.center3{
+  padding: 25px;
+}

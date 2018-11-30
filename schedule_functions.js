@@ -47,9 +47,9 @@ function showTable()
 
       trackArr.push(obj);
     }
-    // console.log(trackArr.length);
-    // console.log(trackArr[0].professor);
-  }
+    console.log(trackArr.length);
+    console.log(trackArr[0].professor);
+  
 
   for(var n=0; n<trackArr.length; n++)
   {
@@ -194,7 +194,7 @@ function showTable()
     body.appendChild(tbl);
   }
 }
-
+}
 
 function goToSearch()
 {
