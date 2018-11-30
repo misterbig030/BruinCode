@@ -3,15 +3,9 @@ body {
   text-align: center;
 }
 
-.center1{
-      font-family: 'Mali',serif;
-      color:#68A5D8;
-      margin:0 auto;
-      width: 40%;
-      height:100%;
-}
 
-.center1 h1:after, .center1 h1:before {
+
+ h1:after,  h1:before {
         background:	Tomato;
         content: "";
         height: 3px;
@@ -45,7 +39,7 @@ table
 
   h2{
     color:LemonChiffon;
-    font-size: 50px;
+    font-size: 40px;
     text-align: left;
   }
 
@@ -101,7 +95,7 @@ table
     font-family: 'Mali',serif;
     color: white;
     margin: auto;
-    width: 40%;
+    width: 50%;
     border: 3px solid white;
   }
   button{

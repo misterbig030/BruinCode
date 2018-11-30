@@ -3,21 +3,14 @@ background: radial-gradient( DodgerBlue, Aqua);
 
 }
 
-.center1{
-      font-family: 'Mali',serif;
-      color:#68A5D8;
-      margin:0 auto;
-      width: 40%;
-      height:100%;
-      }
 
-.center1 h1:after, .center1 h1:before {
+ h1:after, h1:before {
         background:	Tomato;
         content: "";
         height: 3px;
         position: absolute;
-        top: 10%;
-        width: 25%;
+        top: 13%;
+        width: 30%;
       }
 
 h1:before {
@@ -30,7 +23,7 @@ h1:before {
 
 h1{
         color:yellow;
-        font-size:60px;
+        font-size:75px;
         padding-bottom:3px;
         }
 
