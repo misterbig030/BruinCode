@@ -65,37 +65,71 @@ var usedClasses=[];
 
         courseArr.push(ob);
       }
-        console.log(courseArr.length);
+        //console.log(courseArr);
 
       className= document.getElementById("cName");
-      className.innerHTML=localStorage.getItem("classNam");
+      className.innerHTML="Class Name: "+localStorage.getItem("classNam");
 
-      profName= document.getElementById("pName");
-      profName.innerHTML=localStorage.getItem("profNam");
+
+      var table = document.getElementById("myTable");
+      var row1 = table.insertRow(0);
+      var cell11 = row1.insertCell(0);
+      var cell12 = row1.insertCell(1);
+      cell11.innerHTML=localStorage.getItem("profNam");
+    //  profName= document.getElementById("pName");
+      //profName.innerHTML=localStorage.getItem("profNam");
+      cell12.innerHTML=localStorage.getItem("oSess");
 
       for(foundItem=0; foundItem< courseArr.length; foundItem++)
       {
-        if(className.innerHTML == courseArr[foundItem].courseNumber)
+        if((className.innerHTML == "Class Name: "+courseArr[foundItem].courseNumber) && (cell11.innerHTML == "Professor: "+courseArr[foundItem].professor))
         {
           showWorkLoad();
+          //console.log(courseArr[foundItem]);
           break;
         }
       }
+
 
   }
 
 });
 
 
-  function addToSchedule()
-  {
-     alert(localStorage.classNam);
-    var database = firebase.database();
-    var refToSch=database.ref('scheduleTrack');
+function addToSchedule()
+{
+  //alert(localStorage.classNam);
+  var database = firebase.database();
+  var refToSch=database.ref('scheduleTrack');
+  var added = false;
+  refToSch.on("value", function(snapshot){
+    var data = snapshot.val();
+    var keys = Object.keys(data);
+    //alert(data[keys[0]].professor);
+    const temp = keys.length;
+    //console.log(keys.length);
+    for (var i = 0; i < temp -1; i++){
+      if ((data[keys[i]].professor == courseArr[foundItem].professor) && (data[keys[i]].courseNumber == courseArr[foundItem].courseNumber)){
+        added = true;
+        alert("Class already added to schedule" + i);
+        break;
+      }
+      console.log(added);
+    }
 
+    console.log(added);
+
+
+  }, function(error){
+    console.log("Error: " + error.code);
+  })
+  if (added == false){
     refToSch.push(courseArr[foundItem]);
-    // refToSch.remove();
+
   }
+
+  // refToSch.remove();
+}
 
   function moveToSchedule()
   {
@@ -166,5 +200,6 @@ function openInfo(evt, name) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
     document.getElementById(name).style.display = "block";
+    document.getElementById("syllabus").onclick = function(){window.location.href = courseArr[foundItem].syllabus;}
     evt.currentTarget.className += " active";
 }
