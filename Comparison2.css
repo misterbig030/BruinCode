@@ -1,0 +1,86 @@
+body {
+  background: radial-gradient( DodgerBlue, Aqua);
+}
+
+.center1{
+      font-family: 'Mali',serif;
+      color:#68A5D8;
+      margin:0 auto;
+      width: 60%;
+      height:100%;
+      }
+
+.center1 h1:after, .center1 h1:before {
+        background:	Tomato;
+        content: "";
+        height: 3px;
+        position: absolute;
+        top: 18%;
+        width: 35%;
+      }
+
+h1:before{
+    left: 0;
+}
+
+h1:after {
+        right: 0;
+      }
+
+h1{
+				color:yellow;
+			  font-size: 100px;
+}
+
+.center2{
+      font-family: 'Mali',serif;
+
+      margin:0 auto;
+      width: 80%;
+      height:100%;
+}
+
+table{
+	font-size: 25px;
+  width: 100%;
+}
+
+#class1{
+	font-size:30px;
+    font-weight:bold;
+    padding-bottom:3px;
+}
+
+#class2{
+	font-size:30px;
+    font-weight:bold;
+    padding-bottom:3px;
+}
+
+#seeSchedule{
+  height: 40px;
+  width: 200px;
+  font-size: 22px;
+  font-family: 'Mali',serif;
+}
+
+
+.content{
+  padding: 40px;
+  font-size: 30px;
+  font-family: 'Mali',serif;
+  color: white;
+  margin: auto;
+  width: 35%;
+  border: 3px solid white;
+}
+button{
+  padding: 5px;
+  margin: 30px;
+  background-color: GhostWhite;
+  border-radius: 8px;
+  font-size: 22px;
+}
+button:hover {
+background-color: #ddd;
+}
