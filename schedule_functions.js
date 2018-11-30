@@ -49,7 +49,7 @@ function showTable()
     }
     console.log(trackArr.length);
     console.log(trackArr[0].professor);
-  
+
 
   for(var n=0; n<trackArr.length; n++)
   {
@@ -132,7 +132,7 @@ function showTable()
           if (j==1 && i==0)
           {
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode("CS something"));     // localStorage.classNam
+            td.appendChild(document.createTextNode(trackArr[n].courseNumber));     // localStorage.classNam
             td.style.padding="20px";
             td.style.color="white";
             tr.appendChild(td);
@@ -140,7 +140,7 @@ function showTable()
           else if (j==1 && i==1)
           {
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode('Dr. Blah'));
+            td.appendChild(document.createTextNode(trackArr[n].professor));
             td.style.padding="20px";
             td.style.color="white";
             tr.appendChild(td);
@@ -148,7 +148,7 @@ function showTable()
           else if (j==1 && i==2)
           {
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode('4'));
+            td.appendChild(document.createTextNode(trackArr[n].lecHours));
             td.style.padding="20px";
             td.style.color="white";
             tr.appendChild(td);
@@ -156,7 +156,7 @@ function showTable()
           else if (j==1 && i==3)
           {
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode('9'));
+            td.appendChild(document.createTextNode(trackArr[n].outHours));
             td.style.padding="20px";
             td.style.color="white";
             tr.appendChild(td);
@@ -164,7 +164,7 @@ function showTable()
           else if (j==1 && i==4)
           {
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode('5'));
+            td.appendChild(document.createTextNode(trackArr[n].projects));
             td.style.padding="20px";
             td.style.color="white";
             tr.appendChild(td);
@@ -172,7 +172,7 @@ function showTable()
           else if (j==1 && i==5)
           {
             var td = document.createElement('td');
-            td.appendChild(document.createTextNode('0'));
+            td.appendChild(document.createTextNode(trackArr[n].essays));
             td.style.padding="20px";
             td.style.color="white";
             tr.appendChild(td);
