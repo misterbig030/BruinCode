@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BruinCode</title>
+    <link href="./search.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mali">
+  </head>
+  <body>
+
+      <h1 align="center">Search</h1>
+      <div class="center1">
+      <h2 align="center">-- Welcome to BruinCode!  --</h2>
+    </div>
+  <div class="content">
+
+    <div class="center2">
+      <p style="font-size: 40px;">Search for your class:</p>
+      <form id="courseDep">Department:<input class="searchForm" id="depInp" type="text"></form>
+      <form >Course Name:<select class="searchForm" id="courseNum">
+      <option value="0">--- Select Class ---</option> </select></form>
+    </div>
+
+    <br>
+    <div class="center3"> <button class="btn" id="searchBtn">Search</button></div>
+  </div>
+
+
+
+
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="./coursedata.js"></script>
+    <script src="./search.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+  </body>
+
+</html>
