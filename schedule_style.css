@@ -1,6 +1,10 @@
 body  {
-background: radial-gradient( DodgerBlue, Aqua);
-font-family: 'K2D', sans-serif;
+  background-image:url('2.jpg');
+  background-repeat:no-repeat;
+   background-position:center;
+   background-size: cover;
+   background-color:#CCCCCC;
+   text-align: center;
 }
 
 h1:after,  h1:before {
@@ -8,8 +12,8 @@ h1:after,  h1:before {
         content: "";
         height: 3px;
         position: absolute;
-        top: 18%;
-        width: 28%;
+        top: 13%;
+        width: 30%;
       }
 
 h1:before {
@@ -22,8 +26,13 @@ h1:before {
 
 h1{
         color:yellow;
-        font-size: 100px;
+        font-size: 70px;
+        padding-bottom:1px;
       }
+h2{
+      color:LemonChiffon;
+      font-size:40px;
+  }
 table{
   align-items: center;
   width: 200px;
@@ -37,19 +46,24 @@ background-color: #ddd;
 }
 
 button{
-  margin: 40px;
+  margin: 20px;
   padding: 15px;
   background-color: GhostWhite;
-  border-radius: 8px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .content{
-  padding: 40px;
+  padding: 1px;
   font-size: 30px;
   font-family: 'Mali',serif;
   color: white;
   margin: auto;
-  width: 35%;
-  border: 3px solid white;
+  width: 50%;
   text-align: left;
 }
+.center1
+{
+      color:LemonChiffon;
+      margin:0 auto;
+      width: 35%;
+      text-align: center;
+  }

@@ -4,24 +4,29 @@ body {
    background-position:center;
    background-size: cover;
    background-color:#CCCCCC;
-   text-align: center;
+text-align: center;
 }
 .content{
   padding: 1%;
-  font-size: 28px;
+  font-size: 25px;
   font-family: 'Mali',serif;
   color: white;
   margin: auto;
-  width: 57%;
+  width: 40%;
   border: 3px solid white;
-
 }
+.center1
+{
+      margin:0 auto;
+      width: 60%;
+      height:100%;
+  }
 p{
-  text-align: left;
+    text-align: center;
 }
 h2{
-color:LemonChiffon;
-  font-size: 40px;
+  color:LemonChiffon;
+  font-size: 36px;
   padding-left: 10px;
 }
 h1{
@@ -31,10 +36,9 @@ h1{
 button{
   background-color: GhostWhite;
   border-radius: 8px;
-  font-size: 30px;
+  font-size: 26px;
 }
 input{
-    width: 12%;
     font-size:25px;
     border: 2px;
     border-radius: 6px;
@@ -54,7 +58,7 @@ h1:before {
 
  h1:after {
         right: 0;
-      }
-  button:hover {
-      background-color: #ddd;
-      }
+}
+button:hover {
+background-color: #ddd;
+}

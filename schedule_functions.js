@@ -211,4 +211,13 @@ function goToSearch()
    var database = firebase.database();
    var refToTrack=database.ref('scheduleTrack');
    refToTrack.remove();
+   var tb = document.getElementById('table');
+     var rowNum=tb.rows.length;
+     for (i=0;i<rowNum;i++)
+     {
+         tb.deleteRow(i);
+         rowNum=rowNum-1;
+         i=i-1;
+     }
+
  }

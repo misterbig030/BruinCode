@@ -1,14 +1,18 @@
 body {
-background: radial-gradient( DodgerBlue, Aqua);
+background-image:url('2.jpg');
+background-repeat:no-repeat;
+ background-position:center;
+ background-size: cover;
+ background-color:#CCCCCC;
 text-align: center;
 }
 .content{
-  padding: 10%;
-  font-size: 30px;
+  padding: 1%;
+  font-size: 25px;
   font-family: 'Mali',serif;
   color: white;
   margin: auto;
-  width: 30%;
+  width: 46%;
   border: 3px solid white;
 }
 p{
@@ -16,22 +20,22 @@ p{
 }
 h2{
   color:LemonChiffon;
-  font-size: 40px;
-  padding-left: 10px;
+  font-size: 37px;
+  padding-left: 3px;
 }
 h1{
   color:yellow;
-  font-size: 100px;
+  font-size: 70px;
 }
 button{
   background-color: GhostWhite;
   border-radius: 8px;
-  font-size: 30px;
+  font-size: 26px;
 }
 input{
-    font-size:25px;
+    font-size:20px;
     border: 2px;
-    border-radius: 6px;
+    border-radius: 3px;
 }
 h1:after,  h1:before {
         background:	Tomato;

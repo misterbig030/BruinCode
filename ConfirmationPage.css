@@ -1,27 +1,40 @@
 body {
-background: radial-gradient(  DodgerBlue, Aqua);
-text-align: center;
+  background-image:url('2.jpg');
+  background-repeat:no-repeat;
+   background-position:center;
+   background-size: cover;
+   background-color:#CCCCCC;
+   text-align: center;
 }
 .content{
-  padding: 8%;
+  padding: 1%;
   font-size: 35px;
   font-family: 'Mali',serif;
   color: white;
   margin: auto;
-  width: 30%;
+  width: 50%;
   border: 3px solid white;
+  text-align: center;
 }
 p{
   text-align: left;
+  font-size:32px;
 }
+.center1
+{
+      margin:0 auto;
+      width: 80%;
+      height:100%;
+      text-align: left;
+  }
 h2{
   color:LemonChiffon;
-  font-size: 40px;
+  font-size:36px;
   padding-left: 10px;
 }
 h1{
   color:yellow;
-  font-size: 100px;
+  font-size: 70px;
 }
 button{
   border-radius: 8px;
@@ -32,8 +45,8 @@ h1:after,  h1:before {
         content: "";
         height: 3px;
         position: absolute;
-        top: 18%;
-        width: 35%;
+        top: 13%;
+        width: 32%;
       }
 
 h1:before {

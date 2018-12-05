@@ -1,6 +1,10 @@
 body {
-  background: radial-gradient( DodgerBlue, Aqua);
-  text-align: center;
+  background-image:url('2.jpg');
+  background-repeat:no-repeat;
+   background-position:center;
+   background-size: cover;
+   background-color:#CCCCCC;
+   text-align: center;
 }
 
 
@@ -28,18 +32,19 @@ h1:before {
 
 h1{
   color:yellow;
-  font-size: 70px;
+  font-size: 68px;
 }
 
 table
   {
       width:100%;
       font-size: 30px;
+      text-align: left;
   }
 
   h2{
     color:LemonChiffon;
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;
   }
 
@@ -95,7 +100,7 @@ table
     font-family: 'Mali',serif;
     color: white;
     margin: auto;
-    width: 50%;
+    width: 60%;
     border: 3px solid white;
   }
   button{
